@@ -9,12 +9,16 @@ namespace Golf
     {
         public bool isAffect = false;
 
+        public static System.Action onCollisionStone;//либо это убрать (и всё на что ругается компилятор при его удалении)
+
         private void OnCollisionEnter(Collision collision)
         {
             if (collision.transform.TryGetComponent(out Stone other))
             { 
                 if (!other.isAffect) 
                 {
+                    onCollisionStone?.Invoke();
+
                     GameEvents.CollisonStonesInvoke(collision);
                 }
             }

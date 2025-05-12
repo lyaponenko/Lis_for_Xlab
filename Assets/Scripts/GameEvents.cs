@@ -7,7 +7,7 @@ namespace Golf
 {
     public static class GameEvents
     {
-        public static event System.Action onCollisionStones;
+        public static event System.Action onCollisionStones;//либо это убрать (и всё на что ругается компилятор при его удалении)
         public static event System.Action onStickHit;
 
 

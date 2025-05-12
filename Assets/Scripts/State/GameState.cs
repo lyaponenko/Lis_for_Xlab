@@ -8,11 +8,11 @@ namespace Golf
     {
         public List<GameObject> views;
 
-        public void Enter()
+        public virtual void Enter()
         { 
             gameObject.SetActive(true);
         }
-        public void Exit() 
+        public virtual  void Exit() 
         { 
             gameObject.SetActive(false);
         }

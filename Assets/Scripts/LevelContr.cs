@@ -30,6 +30,7 @@ namespace Golf
             }
             m_stones.Clear();
         }
+        
 
         public void Start()
         {
@@ -57,7 +58,7 @@ namespace Golf
             score++;
             hightScore = Mathf.Max(hightScore, score);
 
-            Debug.Log($"score: {score} - hightScore: {hightScore}");
+            //Debug.Log($"score: {score} - hightScore: {hightScore}");
         }
 
 

@@ -20,6 +20,7 @@ namespace Golf
             levelContr.enabled = true;
             playerContr.enabled = true;
 
+            //Stone.onCollisionStone+= OnGameOver;
             GameEvents.onCollisionStones += OnGameOver;
             GameEvents.onStickHit += OnStickHit;
             OnStickHit();
@@ -39,6 +40,7 @@ namespace Golf
         {
             base.OnDisable();
 
+            //Stone.onCollisionStone -= OnGameOver;
             GameEvents.onCollisionStones -= OnGameOver;
 
             levelContr.enabled = false;

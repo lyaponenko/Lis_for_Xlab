@@ -36,11 +36,12 @@ namespace Golf
 
         public void OnCollisionStick(Collider collider)
         {
-            if (collider.TryGetComponent<Rigidbody>(out Rigidbody body))
+            if (collider.TryGetComponent(out Rigidbody body))
             {
                 //var dir = m_isDown ? stick.right : -stick.right;
                 var dir = (helper.position - m_lastPosition).normalized;
                 body.AddForce(dir * power, ForceMode.Impulse);
+                //&& !stone.isAffect
                 if (collider.TryGetComponent(out Stone stone) && !stone.isAffect)
                 { 
                     stone.isAffect = true;
